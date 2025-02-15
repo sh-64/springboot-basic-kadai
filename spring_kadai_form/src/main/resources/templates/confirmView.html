@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+	
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>確認画面</title>
+	<style>  
+		table {  
+			width: 100%;  
+			border-collapse: collapse;  
+		}  
+		th, td {  
+			border: 1px solid #000;  
+			padding: 8px;  
+			text-align: left;  
+		}  
+		h1 {  
+			text-align: center;  
+		}  
+	</style>  
+</head>
+<body>
+	<h1>入力内容をご確認ください</h1>
+	
+	<table>  
+		<tr>  
+			<th>項目</th>  
+			<th>入力内容</th>  
+		</tr>  
+		<tr>  
+			<td>お名前</td>  
+			<td><span th:text="${contactForm.name}"></span></td>  
+		</tr>  
+		<tr>  
+			<td>メールアドレス</td>  
+			<td><span th:text="${contactForm.email}"></span></td>  
+		</tr>  
+		<tr>  
+			<td>お問い合わせ内容</td>  
+			<td><p th:text="${contactForm.message}"></p></td>  
+		</tr>  
+	</table>  
+</body>  
+</html>  
